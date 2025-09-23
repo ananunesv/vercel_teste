@@ -37,7 +37,7 @@ export default function HomePage() {
               Busca Inteligente de Investimentos em Atos
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Monitore investimentos em tecnologias educacionais através dos diários oficiais municipais brasileiros
+              Monitore investimentos em tecnologias educacionais através dos diários oficiais municipais brasileiros.
             </p>
             <div className="flex justify-center space-x-4">
               <Link
