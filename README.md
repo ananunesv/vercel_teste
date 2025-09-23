@@ -1,54 +1,181 @@
-# 📊 Projeto P.I.T.E.R  
+# Projeto P.I.T.E.R
 
-**Plataforma web para análise de dados públicos municipais relacionados à tecnologia educacional.**  
+**Plataforma de Integração e Transparência em Educação e Recursos**
 
-O **P.I.T.E.R** tem como objetivo centralizar, organizar e disponibilizar informações sobre tecnologia educacional em municípios, permitindo maior transparência, apoio à tomada de decisões e incentivo a políticas públicas baseadas em dados.  
+Aplicação web para monitoramento de tecnologias educacionais em diários oficiais municipais, focada especificamente em Goiânia/GO.
 
----
+## Visão Geral
 
-## 📌 Sumário
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Instalação e Execução](#-instalação-e-execução)
-- [Documentação e Design](#-documentação-e-design)
-- [Contribuindo](#-contribuindo)
-- [Equipe](#-equipe)
-- [Licença](#-licença)
+O P.I.T.E.R é uma plataforma que utiliza a API do Querido Diário para buscar e analisar publicações relacionadas a tecnologias educacionais em diários oficiais do município de Goiânia. A aplicação permite filtrar e visualizar informações sobre infraestrutura, conectividade, robótica, software e serviços tecnológicos no contexto educacional.
 
----
-## 📖 Sobre o Projeto
-O **Projeto de Integração e Transparência em Educação e Recursos (P.I.T.E.R)** busca fornecer uma plataforma digital que facilite a análise de dados públicos municipais ligados à tecnologia educacional.  
+## Funcionalidades Implementadas
 
-Com ele, gestores, professores, pesquisadores e a comunidade em geral poderão ter acesso a informações organizadas e de fácil interpretação, promovendo um ambiente mais transparente e colaborativo.  
+### Interface Principal
+- Busca em tempo real na API do Querido Diário
+- Filtros por categoria tecnológica (infraestrutura, conectividade, robótica, software, serviços)
+- Filtros por período temporal (data início/fim)
+- Visualização de resultados com identificação automática de tipos de atos públicos
+- Carregamento de conteúdo completo dos diários
+- Links diretos para diários originais e downloads de texto
 
----
+### Processamento de Dados
+- Identificação automática de tipos de atos: contratos, regulamentações, decisões
+- Categorização de conteúdo educacional
+- Parsing e exibição de excerpts relevantes
+- Preview limitado de conteúdo completo (primeiros 5000 caracteres)
 
-## ⚙️ Funcionalidades
-- 📊 **Visualização de dados públicos** em gráficos e tabelas interativos.  
-- 🔎 **Busca e filtragem** de informações por município e categoria.  
-- 🌐 **Interface intuitiva** e responsiva para diferentes dispositivos.  
-- 📑 **Relatórios automáticos** para apoio à tomada de decisão.  
-- 🏫 **Foco em dados educacionais**, com destaque para o uso da tecnologia em escolas.  
+## Arquitetura Técnica
 
----
+### Frontend (Next.js)
+- **Framework**: Next.js 14 com App Router
+- **Linguagem**: JavaScript (ES2022)
+- **Estilização**: Tailwind CSS
+- **Gerenciamento de Estado**: React useState hooks
 
-## 🛠 Tecnologias Utilizadas
-- **Frontend:** React, Chart.js, Leaflet  
-- **Backend:** Python / Express  
-- **Banco de Dados:** JSON  
-- **Deploy:** GitHub Pages /GitPages/ Hugo*  
-- **Outros:** API públicas, Figma (para prototipação)  
+### API Integration
+- **API Principal**: Querido Diário (https://queridodiario.ok.org.br/api)
+- **Cliente HTTP**: Axios com interceptors para logging
+- **Timeout**: 30s para requests principais, 15s para conteúdo de diários
+- **Cache**: Revalidação a cada 1 hora
 
----
+### Estrutura de Dados
+```typescript
+// Filtros de busca
+{
+  municipio: 'Goiânia',
+  categoria: 'infraestrutura' | 'conectividade' | 'robotica' | 'software' | 'servicos',
+  dataInicio: 'YYYY-MM-DD',
+  dataFim: 'YYYY-MM-DD'
+}
 
-## 🚀 Instalação e Execução
+// Response da API Querido Diário
+{
+  id, territory_id, territory_name, state_code,
+  date, url, content, txt_url, created_at,
+  edition_number, is_extra_edition
+}
+```
+
+## Tecnologias Utilizadas
+
+### Core
+- **Next.js** 14.2.32
+- **React** 18.2.0
+- **Tailwind CSS** 3.3.0
+
+### HTTP Client
+- **Axios** 1.6.0
+
+### API Externa
+- **Querido Diário API** - Dados de diários oficiais brasileiros
+
+## Instalação e Execução
 
 ### Pré-requisitos
-- [React.js](https://react.dev/)  
-- [Git](https://git-scm.com/)  
-- Gerenciador de pacotes: **npm** ou **yarn**
+- Node.js 18+
+- npm ou yarn
 
-### Passo a passo
+### Setup
 ```bash
-# Clone o
+# Clone o repositório
+git clone https://github.com/unb-mds/Projeto-P.I.T.E.R.git
+
+# Entre no diretório
+cd Projeto-P.I.T.E.R
+
+# Instale dependências
+npm install
+
+# Execute em desenvolvimento
+npm run dev
+
+# Acesse http://localhost:3000
+```
+
+### Scripts Disponíveis
+```bash
+npm run dev      # Servidor de desenvolvimento
+npm run build    # Build de produção
+npm run start    # Servidor de produção
+npm run lint     # Análise estática
+```
+
+## Estrutura do Projeto
+
+```
+src/
+├── app/
+│   ├── api/
+│   │   ├── gazettes/              # API route para Querido Diário
+│   │   └── process-investment-data/ # Processamento + NLP (preparado)
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.js                    # Página principal da aplicação
+├── services/
+│   └── api/
+│       └── QueridoDiarioApiClient.ts # Cliente HTTP para API
+└── types/
+    └── index.ts                   # Definições TypeScript
+```
+
+## Categorias de Busca
+
+### Infraestrutura
+- Laboratórios de informática, salas multimídia
+- Equipamentos e instalações tecnológicas
+- Rede estruturada, cabeamento, energia
+- Mobiliário tecnológico
+
+### Conectividade
+- Internet, banda larga, WiFi
+- Telecomunicações, fibra óptica
+- Provedores, acesso digital
+
+### Robótica
+- Kits de robótica, Arduino, Scratch
+- Programação, pensamento computacional
+- STEM, maker, automação
+
+### Software
+- Software educacional, aplicativos
+- Plataformas digitais, sistemas
+- Licenças, ferramentas digitais
+
+### Serviços
+- Consultoria e suporte técnico
+- Manutenção de equipamentos
+- Treinamento e capacitação digital
+- Assessoria técnica
+
+## API Routes
+
+### `GET /api/gazettes`
+Busca diários oficiais via Querido Diário API
+- Parâmetros: municipio, categoria, data_inicio, data_fim
+- Response: Array de diários com metadados
+
+### `POST /api/process-investment-data`
+Orquestração completa: busca + análise NLP (preparado para microserviço Python)
+- Input: Filtros de busca
+- Output: Dados processados para visualização
+
+## Desenvolvimento
+
+### Estado Atual
+A aplicação está totalmente funcional com integração direta à API do Querido Diário. Todas as funcionalidades de busca, filtragem e visualização estão implementadas.
+
+### Futuras Melhorias
+1. Microserviço NLP em Python/SpaCy para análise semântica
+2. Dashboard com gráficos Chart.js
+3. Exportação de relatórios
+4. Cache local de resultados
+5. Expansão para outros municípios
+
+### Debugging
+- Console logs detalhados em todas as requisições
+- Interceptors Axios para monitoramento de requests/responses
+- Error handling com mensagens específicas por tipo de erro
+
+---
+
+**Desenvolvido pela equipe UnB-MDS**
