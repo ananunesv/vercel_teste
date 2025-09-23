@@ -127,9 +127,31 @@ export class QueridoDiarioApiClient {
     try {
       const response = await axios.get(txtUrl, {
         timeout: 15000,
-        responseType: 'text'
+        responseType: 'text',
+        headers: {
+          'Accept': 'text/plain; charset=utf-8'
+        }
       });
-      return response.data;
+
+      // Garantir que o texto está em UTF-8
+      let content = response.data;
+      if (typeof content === 'string') {
+        // Substituir caracteres mal codificados comuns
+        content = content
+          .replace(/[��]/g, 'í')
+          .replace(/[��]/g, 'ã')
+          .replace(/[��]/g, 'ç')
+          .replace(/[��]/g, 'é')
+          .replace(/[��]/g, 'á')
+          .replace(/[��]/g, 'ó')
+          .replace(/[��]/g, 'ú')
+          .replace(/[��]/g, 'õ')
+          .replace(/[��]/g, 'â')
+          .replace(/[��]/g, 'ê')
+          .replace(/[��]/g, 'ô');
+      }
+
+      return content;
     } catch (error) {
       console.error('Erro ao carregar conteúdo do diário:', error);
       throw new Error('Erro ao carregar conteúdo do diário');

@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { cleanGazetteText } from '@/utils/textCleaner';
 
 export default function HomePage() {
   const [gazettes, setGazettes] = useState([]);
@@ -179,8 +180,15 @@ export default function HomePage() {
     if (!gazette.txt_url) return;
 
     try {
-      const response = await fetch(gazette.txt_url);
-      const content = await response.text();
+      const response = await fetch(gazette.txt_url, {
+        headers: {
+          'Accept': 'text/plain; charset=utf-8'
+        }
+      });
+      let content = await response.text();
+
+      // Limpar o texto usando a função utilitária
+      content = cleanGazetteText(content);
 
       setGazetteContents(prev => ({
         ...prev,
@@ -339,7 +347,7 @@ export default function HomePage() {
                           </span>
                         </div>
                         <p className="text-sm text-gray-700">
-                          {excerpt}
+                          {cleanGazetteText(excerpt)}
                         </p>
                       </div>
                     );
