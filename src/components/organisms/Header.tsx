@@ -1,16 +1,41 @@
-// CAMADA 1: APRESENTAÇÃO - ORGANISM
-// Seções complexas - Header do P.I.T.E.R
+// CAMADA 3: LAYOUT - ORGANISM
+// Header principal da aplicação com navegação e informações
 
 import React from 'react';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  title = "Querido Diário: Tecnologias na Educação",
+  subtitle = "Monitoramento inteligente de tecnologias educacionais em diários oficiais municipais. Transparência e dados públicos para uma educação mais conectada."
+}) => {
   return (
-    <header className="bg-gray-600 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">P.I.T.E.R</h1>
-        <nav>
-          <a href="#" className="text-white hover:text-gray-200">sobre nós</a>
-        </nav>
+    <header className="text-center mb-8">
+      <div className="flex items-center justify-center gap-3 mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          {title}
+        </h1>
+      </div>
+      
+      <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+        {subtitle}
+      </p>
+      
+      {/* Indicadores de status */}
+      <div className="flex items-center justify-center gap-4 mt-4 text-xs text-gray-500">
+        <div className="flex items-center gap-1">
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <span>API Online</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span>Dados Públicos Oficiais</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span>Atualização em Tempo Real</span>
+        </div>
       </div>
     </header>
   );
