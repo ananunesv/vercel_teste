@@ -152,7 +152,7 @@ export default function HomePage() {
       setSearchTime(duration);
       
       if (results.length > 0) {
-        showSuccess(`${results.length} publicação${results.length !== 1 ? 'ões' : ''} encontrada${results.length !== 1 ? 's' : ''} em ${duration.toFixed(2)}s`);
+        showSuccess(`${results.length} publicaç${results.length !== 1 ? 'ões' : 'ão'} encontrada${results.length !== 1 ? 's' : ''} em ${duration.toFixed(2)}s`);
       } else {
         showInfo('Nenhuma publicação encontrada para os filtros selecionados. Tente ajustar os parâmetros de busca.');
       }

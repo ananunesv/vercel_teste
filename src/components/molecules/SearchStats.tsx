@@ -51,7 +51,7 @@ export const SearchStats: React.FC<SearchStatsProps> = ({
         <div className="flex items-center gap-3">
           <div>
             <h2 className="text-xl font-semibold text-gray-800">
-              {totalResults.toLocaleString()} publicação{totalResults !== 1 ? 'ões' : ''} encontrada{totalResults !== 1 ? 's' : ''}
+              {totalResults.toLocaleString()} publicaç{totalResults !== 1 ? 'ões' : 'ão'} encontrada{totalResults !== 1 ? 's' : ''}
             </h2>
             <p className="text-gray-600">
               Tecnologias educacionais em diários oficiais municipais
