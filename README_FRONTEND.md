@@ -7,24 +7,24 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.2.0-blue)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.0-cyan)
 
-## 🎯 Objetivo do Projeto
+## Objetivo do Projeto
 
 O **P.I.T.E.R** (Plataforma de Integração e Transparência em Educação e Recursos) é uma aplicação web completa que monitora **tecnologias educacionais** em diários oficiais municipais, focada em **Goiânia/GO**.
 
-### 📋 Funcionalidades Principais
+### Funcionalidades Principais
 
-- 🔍 **Busca inteligente** na API do Querido Diário
-- 🏗️ **Filtros por categoria** (Infraestrutura, Conectividade, Robótica, Software, Serviços)
-- 📅 **Filtros temporais** personalizáveis
-- 📊 **Identificação automática** de tipos de atos públicos
-- 📄 **Carregamento completo** de diários oficiais
-- 🎨 **Interface responsiva** e acessível
-- ⚡ **Notificações em tempo real**
-- 📈 **Estatísticas de busca** em tempo real
+- **Busca inteligente** na API do Querido Diário
+- **Filtros por categoria** (Infraestrutura, Conectividade, Robótica, Software, Serviços)
+- **Filtros temporais** personalizáveis
+- **Identificação automática** de tipos de atos públicos
+- **Carregamento completo** de diários oficiais
+- **Interface responsiva** e acessível
+- **Notificações em tempo real**
+- **Estatísticas de busca** em tempo real
 
-## 🏗️ Arquitetura do Frontend
+## Arquitetura do Frontend
 
-### 📁 Estrutura de Componentes (Atomic Design)
+### Estrutura de Componentes (Atomic Design)
 
 ```
 src/
@@ -54,7 +54,7 @@ src/
     └── textCleaner.js
 ```
 
-### 🎨 Design System
+### Design System
 
 #### Cores Principais
 - **Primária**: Gradiente azul-verde (#3B82F6 → #10B981)
@@ -67,7 +67,7 @@ src/
 - **Fonte**: Inter (Google Fonts)
 - **Tamanhos**: Sistema responsivo com Tailwind CSS
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Frontend Core
 - **Next.js 14.2.32** - Framework React com App Router
@@ -79,7 +79,7 @@ src/
 - **Axios 1.6.0** - Cliente HTTP para API
 - **API Querido Diário** - Dados de diários oficiais brasileiros
 
-## 🔧 Instalação e Execução
+## Instalação e Execução
 
 ### Pré-requisitos
 - Node.js 18+
@@ -108,77 +108,77 @@ npm run start    # Servidor de produção
 npm run lint     # Análise estática
 ```
 
-## 📊 Categorias de Tecnologias Educacionais
+## Categorias de Tecnologias Educacionais
 
-### 🏗️ Infraestrutura
+### Infraestrutura
 - Laboratórios de informática
 - Salas multimídia
 - Equipamentos tecnológicos
 - Rede estruturada e cabeamento
 - Mobiliário tecnológico
 
-### 🌐 Conectividade
+### Conectividade
 - Internet e banda larga
 - WiFi educacional
 - Telecomunicações
 - Fibra óptica
 - Provedores de acesso
 
-### 🤖 Robótica
+### Robótica
 - Kits de robótica educacional
 - Arduino e microcontroladores
 - Programação e Scratch
 - Pensamento computacional
 - Projetos STEM
 
-### 💻 Software
+### Software
 - Software educacional
 - Aplicativos pedagógicos
 - Plataformas digitais
 - Sistemas de gestão
 - Licenças educacionais
 
-### 🔧 Serviços
+### Serviços
 - Consultoria tecnológica
 - Suporte técnico
 - Manutenção de equipamentos
 - Capacitação digital
 - Assessoria técnica
 
-## 🎯 Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
 ### Interface Interativa
-- ✅ Busca em tempo real na API do Querido Diário
-- ✅ Filtros dinâmicos por categoria e período
-- ✅ Visualização organizada de resultados
-- ✅ Carregamento progressivo de conteúdo
-- ✅ Links diretos para documentos originais
+- Busca em tempo real na API do Querido Diário
+- Filtros dinâmicos por categoria e período
+- Visualização organizada de resultados
+- Carregamento progressivo de conteúdo
+- Links diretos para documentos originais
 
 ### UX/UI Melhorada
-- ✅ Design responsivo para todos os dispositivos
-- ✅ Animações e transições suaves
-- ✅ Feedback visual instantâneo
-- ✅ Sistema de notificações toast
-- ✅ Loading states e error handling
-- ✅ Acessibilidade WCAG
+- Design responsivo para todos os dispositivos
+- Animações e transições suaves
+- Feedback visual instantâneo
+- Sistema de notificações toast
+- Loading states e error handling
+- Acessibilidade WCAG
 
 ### Processamento Inteligente
-- ✅ Identificação automática de tipos de atos
-- ✅ Categorização de conteúdo educacional
-- ✅ Limpeza e correção de encoding de texto
-- ✅ Parsing de excerpts relevantes
-- ✅ Estatísticas de busca em tempo real
+- Identificação automática de tipos de atos
+- Categorização de conteúdo educacional
+- Limpeza e correção de encoding de texto
+- Parsing de excerpts relevantes
+- Estatísticas de busca em tempo real
 
-## 📱 Interface do Usuário
+## Interface do Usuário
 
 ### Página Principal
 ```
-📰 Header com título e status
-🔍 Barra de busca com filtros
-📊 Painel de estatísticas
-📋 Lista de resultados
-📄 Cards de diários expandíveis  
-❤️ Footer com informações
+Header com título e status
+Barra de busca com filtros
+Painel de estatísticas
+Lista de resultados
+Cards de diários expandíveis
+Footer com informações
 ```
 
 ### Componentes Interativos
@@ -188,7 +188,7 @@ npm run lint     # Análise estática
 - **LoadingOverlay**: Feedback de carregamento
 - **Toast**: Notificações não-intrusivas
 
-## 🔄 API Integration
+## API Integration
 
 ### Endpoint Principal
 ```
@@ -218,7 +218,7 @@ interface GazetteResponse {
 }
 ```
 
-## 🎨 Componentes Principais
+## Componentes Principais
 
 ### 1. SearchBar
 ```tsx
@@ -252,13 +252,13 @@ interface GazetteResponse {
 />
 ```
 
-## 📈 Performance
+## Performance
 
 ### Métricas de Performance
-- ⚡ **First Load**: ~2.5s
-- 🔄 **API Response**: ~1-3s
-- 📱 **Mobile Responsive**: 100%
-- ♿ **Accessibility Score**: A+
+- **First Load**: ~2.5s
+- **API Response**: ~1-3s
+- **Mobile Responsive**: 100%
+- **Accessibility Score**: A+
 
 ### Otimizações
 - Lazy loading de conteúdo
@@ -267,14 +267,14 @@ interface GazetteResponse {
 - Minificação de assets
 - Tree shaking automático
 
-## 🔮 Futuras Melhorias
+## Futuras Melhorias
 
 ### Funcionalidades Planejadas
-- 📊 Dashboard com gráficos interativos
-- 📁 Exportação de relatórios (PDF/CSV)
-- 🔍 Busca avançada com operadores
-- 🏙️ Expansão para outros municípios
-- 🤖 Análise NLP com microserviço Python
+- Dashboard com gráficos interativos
+- Exportação de relatórios (PDF/CSV)
+- Busca avançada com operadores
+- Expansão para outros municípios
+- Análise NLP com microserviço Python
 
 ### Melhorias Técnicas
 - PWA (Progressive Web App)
@@ -283,23 +283,23 @@ interface GazetteResponse {
 - Testes automatizados
 - CI/CD pipeline
 
-## 🤝 Contribuição
+## Contribuição
 
 Este projeto está aberto para contribuições! Áreas de interesse:
 
-- 🎨 Melhorias de UX/UI
-- ⚡ Otimizações de performance
-- 🧪 Testes automatizados
-- 📊 Novas visualizações de dados
-- 🔍 Funcionalidades de busca avançada
+- Melhorias de UX/UI
+- Otimizações de performance
+- Testes automatizados
+- Novas visualizações de dados
+- Funcionalidades de busca avançada
 
-## 📄 Licença
+## Licença
 
 MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 
-**Desenvolvido com ❤️ pela equipe UnB-MDS**
+**Desenvolvido pela equipe UnB-MDS**
 
-🌐 **Dados fornecidos pela API do Querido Diário**  
-🏛️ **Contribuindo para transparência pública na educação**
+**Dados fornecidos pela API do Querido Diário**
+**Contribuindo para transparência pública na educação**

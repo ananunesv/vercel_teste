@@ -110,7 +110,7 @@ export default function HomePage() {
   const searchGazettes = async () => {
     setIsLoading(true);
     const startTime = performance.now();
-    console.log('🔍 INICIANDO BUSCA COM FILTROS:', filters);
+    console.log('INICIANDO BUSCA COM FILTROS:', filters);
 
     try {
       showInfo('Iniciando busca nos diários oficiais...');
@@ -128,8 +128,8 @@ export default function HomePage() {
         sort_by: 'descending_date'
       });
 
-      console.log('🌐 URL:', `https://queridodiario.ok.org.br/api/gazettes?${params}`);
-      console.log('🎯 Territory ID:', territoryId);
+      console.log('URL:', `https://queridodiario.ok.org.br/api/gazettes?${params}`);
+      console.log('Territory ID:', territoryId);
       console.log('🔎 Query:', querystring);
 
       const response = await fetch(`https://queridodiario.ok.org.br/api/gazettes?${params}`);
@@ -140,9 +140,9 @@ export default function HomePage() {
       
       const data = await response.json();
 
-      console.log('📊 Resposta completa:', data);
-      console.log('🏙️ Cidades nos resultados:', [...new Set(data.gazettes?.map(g => g.territory_name) || [])]);
-      console.log('📈 Total encontrados:', data.total_gazettes);
+      console.log('Resposta completa:', data);
+      console.log('Cidades nos resultados:', [...new Set(data.gazettes?.map(g => g.territory_name) || [])]);
+      console.log('Total encontrados:', data.total_gazettes);
 
       const results = data.gazettes || [];
       setGazettes(results);
@@ -270,7 +270,6 @@ export default function HomePage() {
           {!isLoading && gazettes.length > 0 && (
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-                <span>📋</span>
                 Publicações Encontradas
               </h3>
               

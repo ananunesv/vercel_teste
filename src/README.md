@@ -7,7 +7,7 @@ Guia de configuração e execução do ambiente de desenvolvimento local para a 
 
 -----
 
-## 🛠️ Tecnologias
+## Tecnologias
 
   - **Linguagem:** Python
   - **Framework:** FastAPI
@@ -17,7 +17,7 @@ Guia de configuração e execução do ambiente de desenvolvimento local para a 
 
 -----
 
-## 🚀 Como Rodar o Projeto Localmente
+## Como Rodar o Projeto Localmente
 
 Siga estes 4 passos para ter o projeto rodando na sua máquina.
 

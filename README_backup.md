@@ -1,4 +1,4 @@
-# 📊 Projeto P.I.T.E.R  
+# Projeto P.I.T.E.R  
 
 **Plataforma web para análise de dados públicos municipais relacionados à tecnologia educacional.**  
 
@@ -6,7 +6,7 @@ O **P.I.T.E.R** tem como objetivo centralizar, organizar e disponibilizar inform
 
 ---
 
-## 📌 Sumário
+## Sumário
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
@@ -17,23 +17,23 @@ O **P.I.T.E.R** tem como objetivo centralizar, organizar e disponibilizar inform
 - [Licença](#-licença)
 
 ---
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 O **Projeto de Integração e Transparência em Educação e Recursos (P.I.T.E.R)** busca fornecer uma plataforma digital que facilite a análise de dados públicos municipais ligados à tecnologia educacional.  
 
 Com ele, gestores, professores, pesquisadores e a comunidade em geral poderão ter acesso a informações organizadas e de fácil interpretação, promovendo um ambiente mais transparente e colaborativo.  
 
 ---
 
-## ⚙️ Funcionalidades
-- 📊 **Visualização de dados públicos** em gráficos e tabelas interativos.  
-- 🔎 **Busca e filtragem** de informações por município e categoria.  
-- 🌐 **Interface intuitiva** e responsiva para diferentes dispositivos.  
-- 📑 **Relatórios automáticos** para apoio à tomada de decisão.  
-- 🏫 **Foco em dados educacionais**, com destaque para o uso da tecnologia em escolas.  
+## Funcionalidades
+- **Visualização de dados públicos** em gráficos e tabelas interativos.  
+- **Busca e filtragem** de informações por município e categoria.  
+- **Interface intuitiva** e responsiva para diferentes dispositivos.  
+- **Relatórios automáticos** para apoio à tomada de decisão.  
+- **Foco em dados educacionais**, com destaque para o uso da tecnologia em escolas.  
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - **Frontend:** React, Chart.js, Leaflet  
 - **Backend:** Python / Express  
 - **Banco de Dados:** JSON  
@@ -42,7 +42,7 @@ Com ele, gestores, professores, pesquisadores e a comunidade em geral poderão t
 
 ---
 
-## 🚀 Instalação e Execução
+## Instalação e Execução
 
 ### Pré-requisitos
 - [React.js](https://react.dev/)  

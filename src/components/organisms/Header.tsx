@@ -15,22 +15,19 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="text-center mb-8">
       <div className="flex items-center justify-center gap-3 mb-4">
-        <span className="text-5xl" role="img" aria-label="Busca">
-          �
-        </span>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
           {title}
         </h1>
       </div>
-      
+
       <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed mb-4">
         {subtitle}
       </p>
-      
+
       <p className="text-gray-500 text-sm max-w-xl mx-auto">
         Procurador de Investimentos em Tecnologia na Educação
       </p>
-      
+
       {/* Indicadores de status */}
       <div className="flex items-center justify-center gap-4 mt-4 text-xs text-gray-500">
         <div className="flex items-center gap-1">
@@ -38,11 +35,9 @@ export const Header: React.FC<HeaderProps> = ({
           <span>API Online</span>
         </div>
         <div className="flex items-center gap-1">
-          <span>📊</span>
           <span>Dados Públicos Oficiais</span>
         </div>
         <div className="flex items-center gap-1">
-          <span>⏱️</span>
           <span>Tempo Real</span>
         </div>
       </div>
