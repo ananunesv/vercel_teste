@@ -97,7 +97,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
               <div key={i} className="bg-gray-50 p-4 rounded-lg mb-3 border-l-4 border-blue-400">
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${actType.color}`}>
-                    {actType.icon} {actType.type}
+                    {actType.type}
                   </span>
                   <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">
                     Educação
@@ -152,7 +152,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
               variant="secondary"
               className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 hover:bg-purple-200"
             >
-              <span>📖</span>
               {isExpanded ? 'Recarregar' : 'Carregar'} Conteúdo Completo
             </Button>
             
@@ -162,7 +161,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm hover:bg-green-200 transition-colors"
             >
-              <span>📥</span>
               Baixar Texto
             </a>
           </>
@@ -174,7 +172,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
             variant="secondary"
             className="inline-flex items-center gap-2"
           >
-            <span>🔼</span>
             Fechar Conteúdo
           </Button>
         )}

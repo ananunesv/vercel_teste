@@ -19,6 +19,11 @@ body {
   @apply animate-spin rounded-full h-4 w-4 border-b-2 border-current;
 }
 
+/* Force new CSS hash */
+.force-rebuild {
+  @apply hidden;
+}
+
 /* Estilos para o gráfico */
 .chart-container canvas {
   @apply max-h-96;
