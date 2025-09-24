@@ -50,21 +50,21 @@ export const Toast: React.FC<ToastProps> = ({
   const getIcon = () => {
     switch (type) {
       case 'success':
-        return '✅';
+        return '✓';
       case 'error':
-        return '❌';
+        return '×';
       case 'warning':
-        return '⚠️';
+        return '!';
       case 'info':
       default:
-        return 'ℹ️';
+        return 'i';
     }
   };
 
   return (
     <div className={getToastStyles()}>
       <div className="flex items-center gap-3">
-        <span className="text-xl">{getIcon()}</span>
+        <span className="text-xl font-bold">{getIcon()}</span>
         <div className="flex-1">
           <p className="font-medium">{message}</p>
         </div>
@@ -75,7 +75,7 @@ export const Toast: React.FC<ToastProps> = ({
           }}
           className="text-white hover:text-gray-200 transition-colors"
         >
-          ✕
+×
         </button>
       </div>
     </div>

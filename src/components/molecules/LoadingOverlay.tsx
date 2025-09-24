@@ -19,7 +19,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
       <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md w-mx">
         <div className="text-center">
           <div className="mb-4">
-            <div className="inline-block animate-spin text-4xl">🔄</div>
+            <div className="inline-block animate-spin w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full"></div>
           </div>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">{message}</h3>
           <p className="text-gray-600 text-sm">

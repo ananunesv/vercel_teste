@@ -8,7 +8,6 @@ export const Footer: React.FC = () => {
     <footer className="mt-16 pt-8 border-t border-gray-200">
       <div className="text-center mb-6">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <span className="text-2xl">❤️</span>
           <p className="text-gray-600">
             Desenvolvido com dados públicos do <strong>Querido Diário</strong>
           </p>
@@ -22,7 +21,6 @@ export const Footer: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-center">
         <div className="space-y-2">
           <h4 className="font-semibold text-gray-800 flex items-center justify-center gap-2">
-            <span>🌐</span>
             Recursos Externos
           </h4>
           <ul className="space-y-1 text-sm">
@@ -51,21 +49,19 @@ export const Footer: React.FC = () => {
 
         <div className="space-y-2">
           <h4 className="font-semibold text-gray-800 flex items-center justify-center gap-2">
-            <span>🎓</span>
             Categorias
           </h4>
           <ul className="space-y-1 text-sm text-gray-600">
-            <li>🏗️ Infraestrutura Tecnológica</li>
-            <li>🌐 Conectividade Digital</li>
-            <li>🤖 Robótica Educacional</li>
-            <li>💻 Software e Aplicativos</li>
-            <li>🔧 Serviços Técnicos</li>
+            <li>Infraestrutura Tecnológica</li>
+            <li>Conectividade Digital</li>
+            <li>Robótica Educacional</li>
+            <li>Software e Aplicativos</li>
+            <li>Serviços Técnicos</li>
           </ul>
         </div>
 
         <div className="space-y-2">
           <h4 className="font-semibold text-gray-800 flex items-center justify-center gap-2">
-            <span>📊</span>
             Dados e Estatísticas
           </h4>
           <ul className="space-y-1 text-sm text-gray-600">

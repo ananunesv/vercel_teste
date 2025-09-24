@@ -35,16 +35,16 @@ const identifyActType = (excerpt: string) => {
   const text = excerpt.toLowerCase();
 
   if (contractKeywords.some(keyword => text.includes(keyword))) {
-    return { type: 'Contrato', icon: '📄', color: 'bg-blue-100 text-blue-800' };
+    return { type: 'Contrato', color: 'bg-blue-100 text-blue-800' };
   }
   if (regulationKeywords.some(keyword => text.includes(keyword))) {
-    return { type: 'Regulamentação', icon: '📋', color: 'bg-green-100 text-green-800' };
+    return { type: 'Regulamentação', color: 'bg-green-100 text-green-800' };
   }
   if (decisionKeywords.some(keyword => text.includes(keyword))) {
-    return { type: 'Decisão', icon: '⚖️', color: 'bg-purple-100 text-purple-800' };
+    return { type: 'Decisão', color: 'bg-purple-100 text-purple-800' };
   }
 
-  return { type: 'Ato Público', icon: '📊', color: 'bg-gray-100 text-gray-800' };
+  return { type: 'Ato Público', color: 'bg-gray-100 text-gray-800' };
 };
 
 export const ResultCard: React.FC<ResultCardProps> = ({
@@ -60,7 +60,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
       {/* Cabeçalho */}
       <div className="flex justify-between items-start mb-4">
         <div className="flex items-center gap-3">
-          <span className="text-2xl">📰</span>
           <div>
             <h3 className="font-bold text-lg text-gray-800">
               {gazette.territory_name} - {gazette.state_code}
@@ -89,7 +88,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
       {gazette.excerpts && gazette.excerpts.length > 0 && (
         <div className="mb-4">
           <h4 className="font-semibold text-gray-700 mb-3 flex items-center gap-2">
-            <span>🎯</span>
             Conteúdo Educacional Identificado:
           </h4>
           
@@ -102,7 +100,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
                     {actType.icon} {actType.type}
                   </span>
                   <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">
-                    🎓 Educação
+                    Educação
                   </span>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed">
@@ -118,7 +116,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
       {isExpanded && content && (
         <div className="mb-4 bg-gray-50 p-4 rounded-lg border">
           <h4 className="font-semibold text-gray-700 mb-3 flex items-center gap-2">
-            <span>📄</span>
             Conteúdo Completo do Diário:
           </h4>
           <div className="max-h-96 overflow-y-auto bg-white p-3 rounded border">
@@ -129,7 +126,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
           </div>
           {content.length > 5000 && (
             <p className="text-xs text-gray-500 mt-2 flex items-center gap-1">
-              <span>📊</span>
               Mostrando os primeiros 5.000 caracteres de {content.length.toLocaleString()} total
             </p>
           )}
@@ -145,7 +141,6 @@ export const ResultCard: React.FC<ResultCardProps> = ({
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm hover:bg-blue-200 transition-colors"
           >
-            <span>🌐</span>
             Ver Diário Original
           </a>
         )}
