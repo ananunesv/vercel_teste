@@ -36,14 +36,14 @@ export const Toast: React.FC<ToastProps> = ({
 
     switch (type) {
       case 'success':
-        return `${baseStyles} bg-green-500 text-white`;
+        return `${baseStyles} bg-gray-300 text-gray-800`;
       case 'error':
-        return `${baseStyles} bg-red-500 text-white`;
+        return `${baseStyles} bg-gray-400 text-gray-900`;
       case 'warning':
-        return `${baseStyles} bg-yellow-500 text-white`;
+        return `${baseStyles} bg-gray-200 text-gray-700`;
       case 'info':
       default:
-        return `${baseStyles} bg-blue-500 text-white`;
+        return `${baseStyles} bg-gray-100 text-gray-600`;
     }
   };
 
@@ -73,7 +73,7 @@ export const Toast: React.FC<ToastProps> = ({
             setIsVisible(false);
             setTimeout(onClose, 300);
           }}
-          className="text-white hover:text-gray-200 transition-colors"
+          className="text-gray-600 hover:text-gray-800 transition-colors"
         >
 ×
         </button>

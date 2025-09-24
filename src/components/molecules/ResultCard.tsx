@@ -35,13 +35,13 @@ const identifyActType = (excerpt: string) => {
   const text = excerpt.toLowerCase();
 
   if (contractKeywords.some(keyword => text.includes(keyword))) {
-    return { type: 'Contrato', color: 'bg-blue-100 text-blue-800' };
+    return { type: 'Contrato', color: 'bg-gray-100 text-gray-700' };
   }
   if (regulationKeywords.some(keyword => text.includes(keyword))) {
-    return { type: 'Regulamentação', color: 'bg-green-100 text-green-800' };
+    return { type: 'Regulamentação', color: 'bg-gray-200 text-gray-800' };
   }
   if (decisionKeywords.some(keyword => text.includes(keyword))) {
-    return { type: 'Decisão', color: 'bg-purple-100 text-purple-800' };
+    return { type: 'Decisão', color: 'bg-gray-150 text-gray-700' };
   }
 
   return { type: 'Ato Público', color: 'bg-gray-100 text-gray-800' };
@@ -94,12 +94,12 @@ export const ResultCard: React.FC<ResultCardProps> = ({
           {gazette.excerpts.map((excerpt, i) => {
             const actType = identifyActType(excerpt);
             return (
-              <div key={i} className="bg-gray-50 p-4 rounded-lg mb-3 border-l-4 border-blue-400">
+              <div key={i} className="bg-gray-50 p-4 rounded-lg mb-3 border-l-4 border-gray-300">
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${actType.color}`}>
                     {actType.type}
                   </span>
-                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">
+                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
                     Educação
                   </span>
                 </div>
@@ -139,7 +139,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
             href={gazette.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm hover:bg-blue-200 transition-colors"
+            className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition-colors"
           >
             Ver Diário Original
           </a>
@@ -150,7 +150,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
             <Button
               onClick={() => onLoadContent(gazette, index)}
               variant="secondary"
-              className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 hover:bg-purple-200"
+              className="inline-flex items-center gap-2 bg-gray-200 text-gray-800 hover:bg-gray-300"
             >
               {isExpanded ? 'Recarregar' : 'Carregar'} Conteúdo Completo
             </Button>
@@ -159,7 +159,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
               href={gazette.txt_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm hover:bg-green-200 transition-colors"
+              className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition-colors"
             >
               Baixar Texto
             </a>

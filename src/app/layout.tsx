@@ -5,20 +5,20 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'P.I.T.E.R - Querido Diário: Tecnologias na Educação',
-  description: 'Monitoramento inteligente de tecnologias educacionais em diários oficiais municipais de Goiânia/GO. Transparência e dados públicos para uma educação mais conectada.',
-  keywords: 'tecnologias educacionais, diários oficiais, transparência, Goiânia, educação, dados públicos, infraestrutura tecnológica',
+  title: 'P.I.T.E.R - Procurador de Investimentos em Tecnologias na Educação Regional',
+  description: 'Procurador de Investimentos em Tecnologias na Educação Regional. Monitoramento de tecnologias educacionais em diários oficiais municipais de Goiânia/GO.',
+  keywords: 'tecnologias educacionais, diários oficiais, transparência, Goiânia, educação, dados públicos, infraestrutura tecnológica, P.I.T.E.R',
   authors: [{ name: 'Equipe UnB-MDS' }],
   openGraph: {
-    title: 'P.I.T.E.R - Tecnologias na Educação',
+    title: 'P.I.T.E.R - Procurador de Investimentos em Tecnologias na Educação Regional',
     description: 'Plataforma de monitoramento de tecnologias educacionais em diários oficiais',
     type: 'website',
     locale: 'pt_BR',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'P.I.T.E.R - Tecnologias na Educação',
-    description: 'Monitoramento inteligente de tecnologias educacionais em diários oficiais',
+    title: 'P.I.T.E.R - Procurador de Investimentos em Tecnologias na Educação Regional',
+    description: 'Monitoramento de tecnologias educacionais em diários oficiais',
   },
   robots: {
     index: true,

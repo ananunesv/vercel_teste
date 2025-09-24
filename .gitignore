@@ -102,3 +102,9 @@ dist
 # Temporary folders
 tmp/
 temp/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+.env/

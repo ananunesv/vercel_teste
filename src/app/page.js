@@ -1,4 +1,4 @@
-// QUERIDO DIÁRIO: TECNOLOGIAS NA EDUCAÇÃO - Interface Educacional
+// P.I.T.E.R - Interface Educacional
 'use client';
 
 import React, { useState } from 'react';
@@ -110,7 +110,7 @@ export default function HomePage() {
   const searchGazettes = async () => {
     setIsLoading(true);
     const startTime = performance.now();
-    console.log('INICIANDO BUSCA COM FILTROS:', filters);
+    console.log('🔍 INICIANDO BUSCA COM FILTROS:', filters);
 
     try {
       showInfo('Iniciando busca nos diários oficiais...');
@@ -128,9 +128,9 @@ export default function HomePage() {
         sort_by: 'descending_date'
       });
 
-      console.log('URL:', `https://queridodiario.ok.org.br/api/gazettes?${params}`);
-      console.log('Territory ID:', territoryId);
-      console.log('Query:', querystring);
+      console.log('🌐 URL:', `https://queridodiario.ok.org.br/api/gazettes?${params}`);
+      console.log('🎯 Territory ID:', territoryId);
+      console.log('🔎 Query:', querystring);
 
       const response = await fetch(`https://queridodiario.ok.org.br/api/gazettes?${params}`);
       
@@ -140,9 +140,9 @@ export default function HomePage() {
       
       const data = await response.json();
 
-      console.log('Resposta completa:', data);
-      console.log('Cidades nos resultados:', [...new Set(data.gazettes?.map(g => g.territory_name) || [])]);
-      console.log('Total encontrados:', data.total_gazettes);
+      console.log('📊 Resposta completa:', data);
+      console.log('🏙️ Cidades nos resultados:', [...new Set(data.gazettes?.map(g => g.territory_name) || [])]);
+      console.log('📈 Total encontrados:', data.total_gazettes);
 
       const results = data.gazettes || [];
       setGazettes(results);
@@ -158,7 +158,7 @@ export default function HomePage() {
       }
 
     } catch (error) {
-      console.error('Erro:', error);
+      console.error('❌ Erro:', error);
       setGazettes([]);
       showError(`Erro na busca: ${error.message}`);
     }
@@ -240,7 +240,7 @@ export default function HomePage() {
         />
       ))}
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="container mx-auto p-4 md:p-8 max-w-7xl">
           
           {/* Header */}
@@ -269,7 +269,8 @@ export default function HomePage() {
           {/* Resultados */}
           {!isLoading && gazettes.length > 0 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+                <span>📋</span>
                 Publicações Encontradas
               </h3>
               

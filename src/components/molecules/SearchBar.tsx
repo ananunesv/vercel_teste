@@ -19,11 +19,11 @@ interface SearchBarProps {
 }
 
 const categoryOptions = [
-  { value: 'infraestrutura', label: 'Infraestrutura' },
-  { value: 'conectividade', label: 'Conectividade' },
-  { value: 'robotica', label: 'Robótica' },
-  { value: 'software', label: 'Software' },
-  { value: 'servicos', label: 'Serviços' }
+  { value: 'infraestrutura', label: '🏗️ Infraestrutura' },
+  { value: 'conectividade', label: '🌐 Conectividade' },
+  { value: 'robotica', label: '🤖 Robótica' },
+  { value: 'software', label: '💻 Software' },
+  { value: 'servicos', label: '🔧 Serviços' }
 ];
 
 const municipioOptions = [
@@ -39,6 +39,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg border">
       <div className="flex items-center gap-2 mb-4">
+        <span className="text-2xl">🔍</span>
         <h2 className="text-xl font-semibold text-gray-800">Filtros de Busca</h2>
       </div>
 
@@ -101,14 +102,16 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         <Button
           onClick={onSearch}
           disabled={isLoading}
-          className="px-8 py-3 text-lg"
+          className="px-8 py-3 text-lg bg-gray-700 hover:bg-gray-800"
         >
           {isLoading ? (
             <>
+              <span className="animate-spin mr-2">⏳</span>
               Buscando...
             </>
           ) : (
             <>
+              <span className="mr-2">🔍</span>
               Pesquisar Diários
             </>
           )}

@@ -1,4 +1,4 @@
-# 📰 Querido Diário: Tecnologias na Educação
+# P.I.T.E.R
 
 **Frontend funcional e moderno para monitoramento de tecnologias educacionais em diários oficiais municipais**
 

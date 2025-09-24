@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
                 href="https://queridodiario.ok.org.br" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 hover:underline"
+                className="text-gray-700 hover:text-gray-900 hover:underline"
               >
                 Portal Querido Diário
               </a>
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                 href="https://queridodiario.ok.org.br/api" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 hover:underline"
+                className="text-gray-700 hover:text-gray-900 hover:underline"
               >
                 API Querido Diário
               </a>

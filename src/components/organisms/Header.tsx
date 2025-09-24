@@ -9,32 +9,41 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  title = "Querido Diário: Tecnologias na Educação",
-  subtitle = "Monitoramento inteligente de tecnologias educacionais em diários oficiais municipais. Transparência e dados públicos para uma educação mais conectada."
+  title = "P.I.T.E.R",
+  subtitle = "Procurador de Investimentos em Tecnologia na Educação"
 }) => {
   return (
     <header className="text-center mb-8">
       <div className="flex items-center justify-center gap-3 mb-4">
-        <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+        <span className="text-5xl" role="img" aria-label="Busca">
+          �
+        </span>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
           {title}
         </h1>
       </div>
       
-      <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+      <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed mb-4">
         {subtitle}
+      </p>
+      
+      <p className="text-gray-500 text-sm max-w-xl mx-auto">
+        Procurador de Investimentos em Tecnologia na Educação
       </p>
       
       {/* Indicadores de status */}
       <div className="flex items-center justify-center gap-4 mt-4 text-xs text-gray-500">
         <div className="flex items-center gap-1">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
           <span>API Online</span>
         </div>
         <div className="flex items-center gap-1">
+          <span>📊</span>
           <span>Dados Públicos Oficiais</span>
         </div>
         <div className="flex items-center gap-1">
-          <span>Atualização em Tempo Real</span>
+          <span>⏱️</span>
+          <span>Tempo Real</span>
         </div>
       </div>
     </header>
